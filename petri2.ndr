@@ -1,0 +1,66 @@
+p 60.0 165.0 {personnes dehors} 5 n
+t 180.0 105.0 {1 sortir} n 0 w n {} ne
+p 295.0 80.0 {sas sort 1} 0 n
+t 595.0 340.0 {aller au guichet} n 0 w n {} ne
+p 755.0 220.0 {au guichet} 0 n
+t 690.0 140.0 {finir transaction} n 0 w n {} ne
+p 575.0 90.0 {entrain de partir} 0 n
+t 405.0 360.0 {entrer local} n 0 w n {} ne
+p 270.0 355.0 {sas arrive} 0 n
+t 140.0 335.0 {entrer sas} n 0 w n {} ne
+p 290.0 235.0 {dispo sas} 1 n
+p 310.0 165.0 {sas sort 2} 0 n
+t 170.0 210.0 {2 sortir} n 0 w n {} ne
+t 460.0 55.0 {sortir guichet 1} n 0 w n {} ne
+t 400.0 290.0 {sortir local 2} n 0 w n {} ne
+p 515.0 295.0 {local attente} 0 n
+t 465.0 135.0 {sortir guichet 2} n 0 w n {} ne
+t 475.0 220.0 {sortir local 1} n 0 w n {} ne
+p 845.0 50.0 {pas le droit de te casser} 0 n
+p 825.0 335.0 {max ordonnance} 0 n
+t 1090.0 210.0 {utilise ordonnance} n 0 w n {} ne
+t 895.0 205.0 {n'utilise pas d'ordonnance} n 0 w n {} ne
+p 1070.0 75.0 {nb ordonnance utilisé} 0 n
+p 600.0 235.0 {dispo guichet} 2 n
+t 965.0 65.0 {ranger son ordonnance} n 0 w n {} ne
+e {ranger son ordonnance} {pas le droit de te casser} 1 n
+e {nb ordonnance utilisé} {ranger son ordonnance} 1 n
+e {utilise ordonnance} {nb ordonnance utilisé} 1 n
+e {n'utilise pas d'ordonnance} {pas le droit de te casser} 1 n
+e {max ordonnance} {n'utilise pas d'ordonnance} 1 n
+e {max ordonnance} {utilise ordonnance} 1 n
+e {aller au guichet} 0.003459345184 57.51358535 {max ordonnance} 0.504122263 193.064756 3 n
+e {pas le droit de te casser} 0.583726071 44.80862082 {finir transaction} 0.08392033995 182.8332574 3 n
+e {dispo sas} {sortir guichet 2} 1 n
+e {dispo sas} {sortir guichet 1} 1 n
+e {sortir guichet 2} {sas sort 2} 1 n
+e {entrain de partir} 0.5362645757 70.83078428 {sortir guichet 2} 0.01885826268 84.59314393 2 n
+e {sortir guichet 1} {sas sort 1} 1 n
+e {entrain de partir} {sortir guichet 1} 1 n
+e {finir transaction} {entrain de partir} 1 n
+e {au guichet} {finir transaction} 1 n
+e {finir transaction} {dispo guichet} 1 n
+e {aller au guichet} {au guichet} 1 n
+e {dispo guichet} {aller au guichet} 1 n
+e {local attente} {aller au guichet} 1 n
+e {personnes dehors} {entrer sas} 1 n
+e {1 sortir} {personnes dehors} 1 n
+e {2 sortir} 0.5233136815 36.54634205 {personnes dehors} 0.02189760922 116.6799208 2 n
+e {entrer sas} {sas arrive} 1 n
+e {sas arrive} {entrer local} 1 n
+e {2 sortir} {dispo sas} 1 n
+e {dispo sas} {entrer sas} 1 n
+e {entrer local} {dispo sas} 1 n
+e {dispo sas} {sortir local 2} 1 n
+e {sortir local 2} {sas sort 2} 1 n
+e {sas sort 2} {2 sortir} 1 n
+e {sortir local 1} {sas sort 1} 1 n
+e {sas sort 1} {1 sortir} 1 n
+e {1 sortir} {dispo sas} 1 n
+e {dispo sas} {sortir local 1} 1 n
+e {local attente} {sortir local 1} 1 n
+e {local attente} 0.486195165 46.17358551 {sortir local 2} 0.9804501647 81.6149496 2 n
+e {entrer local} {local attente} 1 n
+h petri2
+
+
