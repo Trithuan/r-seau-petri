@@ -1,0 +1,33 @@
+p 60.0 205.0 {personnes dehors} 5 n
+t 265.0 95.0 {1 sortir} n 0 w n {} ne
+t 250.0 355.0 {entrer sas} n 0 w n {} ne
+p 400.0 360.0 {sas arrive} 0 n
+t 545.0 365.0 {entrer local} n 0 w n {} ne
+p 710.0 330.0 {local attente} 0 n
+p 425.0 160.0 {sas sort 2} 0 n
+t 575.0 185.0 {sortir local 2} n 0 w n {} ne
+p 460.0 50.0 {sas sort 1} 0 n
+t 610.0 75.0 {sortir local 1} n 0 w n {} ne
+t 280.0 175.0 {2 sortir} n 0 w n {} ne
+p 425.0 230.0 {dispo sas} 1 n
+e {entrer local} {local attente} 1 n
+e {local attente} 0.3693183098 49.5290319 {sortir local 2} 0.8702606158 166.2437969 2 n
+e {local attente} {sortir local 1} 1 n
+e {dispo sas} {sortir local 1} 1 n
+e {1 sortir} {dispo sas} 1 n
+e {sas sort 1} {1 sortir} 1 n
+e {sortir local 1} {sas sort 1} 1 n
+e {sas sort 2} {2 sortir} 1 n
+e {sortir local 2} {sas sort 2} 1 n
+e {dispo sas} {sortir local 2} 1 n
+e {entrer local} {dispo sas} 1 n
+e {dispo sas} {entrer sas} 1 n
+e {2 sortir} {dispo sas} 1 n
+e {sas arrive} {entrer local} 1 n
+e {entrer sas} {sas arrive} 1 n
+e {2 sortir} 0.5233136813 61.66036005 {personnes dehors} 0.02189760922 196.8603566 2 n
+e {1 sortir} {personnes dehors} 1 n
+e {personnes dehors} {entrer sas} 1 n
+h buffer
+
+
