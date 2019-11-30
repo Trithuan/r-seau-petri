@@ -1,0 +1,90 @@
+p 60.0 145.0 {personnes dehors} 5 n
+p 185.0 155.0 {dispo sas} 1 n
+t 60.0 50.0 {entrer sas} n 0 w n {} ne
+p 190.0 50.0 {sas arrive} 0 n
+p 190.0 420.0 {sas sort 2} 0 n
+p 190.0 360.0 {sas sort 1} 0 n
+t 335.0 50.0 {entrer local} n 0 w n {} ne
+p 335.0 340.0 {local attente} 0 n
+t 275.0 375.0 {sortir local 2} n 0 w n {} ne
+t 275.0 125.0 {sortir guichet 1} n 0 w n {} ne
+t 275.0 300.0 {sortir local 1} n 0 w n {} ne
+t 60.0 345.0 {2 sortir} n 0 w n {} ne
+t 80.0 275.0 {1 sortir} n 0 w n {} ne
+p 765.0 340.0 {max ordo} 0 s
+p 765.0 155.0 {bloqueur < 3 actions} 0 n
+t 925.0 340.0 {utiliser ordo} s 0 w n {} ne
+t 925.0 155.0 {ranger ordo} n 0 w n {} ne
+t 765.0 250.0 {pas utiliser ordo} n 0 w n {} ne
+p 925.0 250.0 {nb ordo utilisé} 0 n
+p 445.0 155.0 {entrain de partir} 0 n
+t 275.0 190.0 {sortir guichet 2} n 0 w n {} ne
+t 560.0 155.0 {partir du guichet} n 0 w n {} ne
+t 560.0 340.0 {aller au guichet} s 0 w n {} ne
+p 600.0 250.0 {au guichet} 0 n
+p 515.0 250.0 {dispo guichet} 2 n
+p 760.0 655.0 {bloc < 3 actions Comm.} 0 s
+p 760.0 470.0 {max ordo Comm.} 0 n
+t 920.0 655.0 {ranger ord. Comm.} s 0 w n {} ne
+t 920.0 470.0 {utiiliser ord Comm.} n 0 w n {} ne
+t 760.0 565.0 {pas utiliser ord Comm.} n 0 w n {} ne
+p 920.0 565.0 {nb ordu Comm. utilisé } 0 n
+t 555.0 655.0 {partir guichet Comm} s 0 w n {} ne
+t 555.0 470.0 {aller au guichet commande } n 0 w n {} ne
+p 480.0 565.0 {au guichet Comm} 0 n
+p 620.0 565.0 {dispo guichet Comm.} 1 n
+e {bloc < 3 actions Comm.} {partir guichet Comm} 3 n
+e {ranger ord. Comm.} {bloc < 3 actions Comm.} 1 n
+e {max ordo Comm.} {utiiliser ord Comm.} 1 n
+e {utiiliser ord Comm.} {nb ordu Comm. utilisé } 1 n
+e {nb ordu Comm. utilisé } {ranger ord. Comm.} 1 n
+e {pas utiliser ord Comm.} {bloc < 3 actions Comm.} 1 n
+e {max ordo Comm.} {pas utiliser ord Comm.} 1 n
+e {aller au guichet commande } {max ordo Comm.} 3 n
+e {partir guichet Comm} 0.4805520346 57.42821606 {entrain de partir} 0.7307706705 456.3266374 1 n
+e {local attente} {aller au guichet commande } 1 n
+e {au guichet Comm} {partir guichet Comm} 1 n
+e {partir guichet Comm} {dispo guichet Comm.} 1 n
+e {dispo guichet Comm.} {aller au guichet commande } 1 n
+e {aller au guichet commande } {au guichet Comm} 1 n
+e {partir du guichet} {dispo guichet} 1 n
+e {partir du guichet} {entrain de partir} 1 n
+e {au guichet} {partir du guichet} 1 n
+e {aller au guichet} {au guichet} 1 n
+e {dispo guichet} {aller au guichet} 1 n
+e {local attente} {aller au guichet} 1 n
+e {entrain de partir} {sortir guichet 2} 2 n
+e {local attente} {sortir local 2} 2 n
+e {2 sortir} {personnes dehors} 2 n
+e {entrer local} {local attente} 1 n
+e {local attente} {sortir local 1} 1 n
+e {dispo sas} {sortir local 1} 1 n
+e {1 sortir} {dispo sas} 1 n
+e {sas sort 1} {1 sortir} 1 n
+e {sortir local 1} {sas sort 1} 1 n
+e {sas sort 2} {2 sortir} 1 n
+e {sortir local 2} {sas sort 2} 1 n
+e {dispo sas} {sortir local 2} 1 n
+e {entrer local} {dispo sas} 1 n
+e {dispo sas} {entrer sas} 1 n
+e {2 sortir} {dispo sas} 1 n
+e {sas arrive} {entrer local} 1 n
+e {entrer sas} {sas arrive} 1 n
+e {1 sortir} {personnes dehors} 1 n
+e {personnes dehors} {entrer sas} 1 n
+e {entrain de partir} {sortir guichet 1} 1 n
+e {sortir guichet 1} {sas sort 1} 1 n
+e {sortir guichet 2} {sas sort 2} 1 n
+e {dispo sas} {sortir guichet 1} 1 n
+e {dispo sas} {sortir guichet 2} 1 n
+e {aller au guichet} {max ordo} 3 n
+e {max ordo} {utiliser ordo} 1 n
+e {max ordo} {pas utiliser ordo} 1 n
+e {utiliser ordo} {nb ordo utilisé} 1 n
+e {nb ordo utilisé} {ranger ordo} 1 n
+e {ranger ordo} {bloqueur < 3 actions} 1 n
+e {pas utiliser ordo} {bloqueur < 3 actions} 1 n
+e {bloqueur < 3 actions} {partir du guichet} 3 n
+h {petri5-2}
+
+

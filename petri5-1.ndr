@@ -1,0 +1,62 @@
+p 60.0 145.0 {personnes dehors} 5 n
+p 185.0 155.0 {dispo sas} 1 n
+t 60.0 50.0 {entrer sas} n 0 w n {} ne
+p 190.0 50.0 {sas arrive} 0 n
+p 190.0 420.0 {sas sort 2} 0 n
+p 190.0 360.0 {sas sort 1} 0 n
+t 335.0 50.0 {entrer local} n 0 w n {} ne
+t 575.0 160.0 {partir du guichet} n 0 w n {} ne
+p 445.0 160.0 {entrain de partir} 0 n
+p 335.0 340.0 {local attente} 0 n
+t 275.0 375.0 {sortir local 2} n 0 w n {} ne
+t 575.0 340.0 {aller au guichet} s 0 w n {} ne
+p 525.0 255.0 {dispo guichet} 2 n
+p 620.0 255.0 {au guichet} 0 n
+t 275.0 125.0 {sortir guichet 1} n 0 w n {} ne
+t 275.0 300.0 {sortir local 1} n 0 w n {} ne
+t 275.0 200.0 {sortir guichet 2} n 0 w n {} ne
+t 60.0 345.0 {2 sortir} n 0 w n {} ne
+t 80.0 275.0 {1 sortir} n 0 w n {} ne
+t 590.0 635.0 {partir guichet Commande } s 0 w n {} ne
+t 575.0 455.0 {aller au guichet Commande} n 0 w n {} ne
+p 660.0 560.0 {guichet Commande} 0 n
+p 510.0 560.0 {dispo guichet Commande} 1 n
+e {dispo guichet Commande} {aller au guichet Commande} 1 n
+e {aller au guichet Commande} {guichet Commande} 1 n
+e {local attente} 0.8411426856 90.42676595 {aller au guichet Commande} 0.4823883563 63.38769597 1 n
+e {partir guichet Commande } 0.5225836179 134.3502884 {entrain de partir} 0.7334573382 279.5084972 1 n
+e {partir guichet Commande } {dispo guichet Commande} 1 n
+e {guichet Commande} {partir guichet Commande } 1 n
+e {dispo sas} {sortir guichet 2} 1 n
+e {dispo sas} {sortir guichet 1} 1 n
+e {sortir guichet 2} {sas sort 2} 1 n
+e {sortir guichet 1} {sas sort 1} 1 n
+e {entrain de partir} {sortir guichet 1} 1 n
+e {personnes dehors} {entrer sas} 1 n
+e {1 sortir} {personnes dehors} 1 n
+e {entrer sas} {sas arrive} 1 n
+e {sas arrive} {entrer local} 1 n
+e {2 sortir} {dispo sas} 1 n
+e {dispo sas} {entrer sas} 1 n
+e {entrer local} {dispo sas} 1 n
+e {dispo sas} {sortir local 2} 1 n
+e {sortir local 2} {sas sort 2} 1 n
+e {sas sort 2} {2 sortir} 1 n
+e {sortir local 1} {sas sort 1} 1 n
+e {sas sort 1} {1 sortir} 1 n
+e {1 sortir} {dispo sas} 1 n
+e {dispo sas} {sortir local 1} 1 n
+e {local attente} {sortir local 1} 1 n
+e {entrer local} {local attente} 1 n
+e {2 sortir} {personnes dehors} 2 n
+e {local attente} {sortir local 2} 2 n
+e {entrain de partir} {sortir guichet 2} 2 n
+e {local attente} {aller au guichet} 1 n
+e {dispo guichet} {aller au guichet} 1 n
+e {aller au guichet} {au guichet} 1 n
+e {au guichet} {partir du guichet} 1 n
+e {partir du guichet} {entrain de partir} 1 n
+e {partir du guichet} {dispo guichet} 1 n
+h {petri5-1}
+
+
