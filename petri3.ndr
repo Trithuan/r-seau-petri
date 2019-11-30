@@ -1,0 +1,138 @@
+p 130.0 285.0 {dispo sas} 1 n
+p 40.0 285.0 {personnes dehors} 5 n
+t 80.0 220.0 {1 sortir} n 0 w n {} ne
+p 130.0 200.0 {sas sort 1} 0 n
+t 175.0 220.0 {sortir guichet 1} n 0 w n {} ne
+p 115.0 345.0 {sas arrive} 0 n
+t 80.0 345.0 {entrer sas} n 0 w n {} ne
+t 175.0 345.0 {entrer local} n 0 w n {} ne
+p 130.0 220.0 {sas sort 2} 0 n
+t 80.0 250.0 {2 sortir} n 0 w n {} ne
+t 175.0 285.0 {sortir local 1} n 0 w n {} ne
+t 185.0 255.0 {sortir local 2} n 0 w n {} ne
+t 185.0 240.0 {sortir guichet 2} n 0 w n {} ne
+p 270.0 285.0 {local attente} 0 n
+t 335.0 125.0 {Aller file 1} 0 w n
+t 335.0 470.0 {aller file 2} 0 w n
+p 400.0 125.0 {file 1} 0 n
+p 450.0 175.0 p2 1 n
+p 450.0 430.0 p3 1 n
+t 485.0 470.0 t2 0 w n
+t 485.0 125.0 t3 0 w n
+p 530.0 470.0 p5 0 n
+p 530.0 125.0 p6 0 n
+t 600.0 470.0 t6 0 w n
+t 585.0 125.0 t7 0 w n
+t 710.0 440.0 t12 0 w n
+t 710.0 150.0 t13 0 w n
+p 415.0 470.0 {file 2} 0 n
+p 1085.0 125.0 p17 0 n
+t 930.0 125.0 t15 0 w n
+p 815.0 125.0 p10 0 n
+t 955.0 470.0 t14 0 w n
+t 815.0 35.0 t22 0 w n
+p 815.0 470.0 p9 0 n
+t 815.0 560.0 t26 0 w n
+t 530.0 610.0 t25 0 w n
+t 530.0 20.0 t21 0 w n
+t 815.0 335.0 t9 0 w n
+p 710.0 385.0 p14 0 n
+p 710.0 195.0 p15 0 n
+t 1085.0 385.0 t17 0 w n
+p 1085.0 470.0 p16 0 n
+t 1085.0 195.0 t16 0 w n
+t 530.0 345.0 t4 0 w n
+p 670.0 335.0 p7 0 n
+t 530.0 240.0 t5 0 w n
+p 670.0 240.0 p8 0 n
+t 815.0 240.0 t8 0 w n
+p 340.0 270.0 {entrain de partir} 0 n
+t 1320.0 340.0 t27 0 w n
+t 1325.0 240.0 t24 0 w n
+e t21 {entrain de partir} 1 n
+e t27 {entrain de partir} 1 n
+e t27 p3 1 n
+e p16 t27 1 n
+e t24 p2 1 n
+e t24 {entrain de partir} 1 n
+e p17 t24 1 n
+e t26 {entrain de partir} 1 n
+e t26 p3 1 n
+e p9 t26 1 n
+e t25 {entrain de partir} 1 n
+e t25 p3 1 n
+e p5 t25 1 n
+e t22 p2 1 n
+e t22 {entrain de partir} 1 n
+e p10 t22 1 n
+e t21 p2 1 n
+e p6 t21 1 n
+e p9 t14 1 n
+e p9 t12 1 n
+e p10 t15 1 n
+e p10 t13 1 n
+e t14 p16 1 n
+e t15 p17 1 n
+e t12 p14 1 n
+e t13 p15 1 n
+e t12 p3 1 n
+e t13 p2 1 n
+e p14 t17 1 n
+e p15 t16 1 n
+e p3 t16 1 n
+e p2 t17 1 n
+e t17 p17 1 n
+e t16 p16 1 n
+e t8 p9 1 n
+e t9 p10 1 n
+e p2 t9 1 n
+e p3 t8 1 n
+e p8 t8 1 n
+e p7 t9 1 n
+e t5 p2 1 n
+e t4 p3 1 n
+e t5 p8 1 n
+e p6 t5 1 n
+e t4 p7 1 n
+e p5 t4 1 n
+e t7 p10 1 n
+e p6 t7 1 n
+e t3 p6 1 n
+e t6 p9 1 n
+e p5 t6 1 n
+e t2 p5 1 n
+e p2 t3 1 n
+e p3 t2 1 n
+e {Aller file 1} {file 1} 1 n
+e {file 1} t3 1 n
+e {file 2} t2 1 n
+e {aller file 2} {file 2} 1 n
+e {local attente} {aller file 2} 1 n
+e {local attente} {Aller file 1} 1 n
+e {dispo sas} {sortir guichet 2} 1 n
+e {dispo sas} {sortir guichet 1} 1 n
+e {sortir guichet 2} {sas sort 2} 1 n
+e {sortir guichet 1} {sas sort 1} 1 n
+e {entrain de partir} {sortir guichet 1} 1 n
+e {personnes dehors} {entrer sas} 1 n
+e {1 sortir} {personnes dehors} 1 n
+e {entrer sas} {sas arrive} 1 n
+e {sas arrive} {entrer local} 1 n
+e {2 sortir} {dispo sas} 1 n
+e {dispo sas} {entrer sas} 1 n
+e {entrer local} {dispo sas} 1 n
+e {dispo sas} {sortir local 2} 1 n
+e {sortir local 2} {sas sort 2} 1 n
+e {sas sort 2} {2 sortir} 1 n
+e {sortir local 1} {sas sort 1} 1 n
+e {sas sort 1} {1 sortir} 1 n
+e {1 sortir} {dispo sas} 1 n
+e {dispo sas} {sortir local 1} 1 n
+e {local attente} {sortir local 1} 1 n
+e {entrer local} {local attente} 1 n
+e {2 sortir} {personnes dehors} 2 n
+e {local attente} {sortir local 2} 2 n
+e {entrain de partir} {sortir guichet 2} 2 n
+h petri3 small
+
+
