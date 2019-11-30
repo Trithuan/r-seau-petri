@@ -1,138 +1,150 @@
-p 130.0 285.0 {dispo sas} 1 n
-p 40.0 285.0 {personnes dehors} 5 n
-t 80.0 220.0 {1 sortir} n 0 w n {} ne
-p 130.0 200.0 {sas sort 1} 0 n
-t 175.0 220.0 {sortir guichet 1} n 0 w n {} ne
-p 115.0 345.0 {sas arrive} 0 n
-t 80.0 345.0 {entrer sas} n 0 w n {} ne
-t 175.0 345.0 {entrer local} n 0 w n {} ne
-p 130.0 220.0 {sas sort 2} 0 n
-t 80.0 250.0 {2 sortir} n 0 w n {} ne
-t 175.0 285.0 {sortir local 1} n 0 w n {} ne
-t 185.0 255.0 {sortir local 2} n 0 w n {} ne
-t 185.0 240.0 {sortir guichet 2} n 0 w n {} ne
-p 270.0 285.0 {local attente} 0 n
-t 335.0 125.0 {Aller file 1} 0 w n
-t 335.0 470.0 {aller file 2} 0 w n
-p 400.0 125.0 {file 1} 0 n
-p 450.0 175.0 p2 1 n
-p 450.0 430.0 p3 1 n
-t 485.0 470.0 t2 0 w n
-t 485.0 125.0 t3 0 w n
-p 530.0 470.0 p5 0 n
-p 530.0 125.0 p6 0 n
-t 600.0 470.0 t6 0 w n
-t 585.0 125.0 t7 0 w n
-t 710.0 440.0 t12 0 w n
-t 710.0 150.0 t13 0 w n
-p 415.0 470.0 {file 2} 0 n
-p 1085.0 125.0 p17 0 n
-t 930.0 125.0 t15 0 w n
-p 815.0 125.0 p10 0 n
-t 955.0 470.0 t14 0 w n
-t 815.0 35.0 t22 0 w n
-p 815.0 470.0 p9 0 n
-t 815.0 560.0 t26 0 w n
-t 530.0 610.0 t25 0 w n
-t 530.0 20.0 t21 0 w n
-t 815.0 335.0 t9 0 w n
-p 710.0 385.0 p14 0 n
-p 710.0 195.0 p15 0 n
-t 1085.0 385.0 t17 0 w n
-p 1085.0 470.0 p16 0 n
-t 1085.0 195.0 t16 0 w n
-t 530.0 345.0 t4 0 w n
-p 670.0 335.0 p7 0 n
-t 530.0 240.0 t5 0 w n
-p 670.0 240.0 p8 0 n
-t 815.0 240.0 t8 0 w n
-p 340.0 270.0 {entrain de partir} 0 n
-t 1320.0 340.0 t27 0 w n
-t 1325.0 240.0 t24 0 w n
-e t21 {entrain de partir} 1 n
-e t27 {entrain de partir} 1 n
-e t27 p3 1 n
-e p16 t27 1 n
-e t24 p2 1 n
-e t24 {entrain de partir} 1 n
-e p17 t24 1 n
-e t26 {entrain de partir} 1 n
-e t26 p3 1 n
-e p9 t26 1 n
-e t25 {entrain de partir} 1 n
-e t25 p3 1 n
-e p5 t25 1 n
-e t22 p2 1 n
-e t22 {entrain de partir} 1 n
-e p10 t22 1 n
-e t21 p2 1 n
-e p6 t21 1 n
-e p9 t14 1 n
-e p9 t12 1 n
-e p10 t15 1 n
-e p10 t13 1 n
-e t14 p16 1 n
-e t15 p17 1 n
-e t12 p14 1 n
-e t13 p15 1 n
-e t12 p3 1 n
-e t13 p2 1 n
-e p14 t17 1 n
-e p15 t16 1 n
-e p3 t16 1 n
-e p2 t17 1 n
-e t17 p17 1 n
-e t16 p16 1 n
-e t8 p9 1 n
-e t9 p10 1 n
-e p2 t9 1 n
-e p3 t8 1 n
-e p8 t8 1 n
-e p7 t9 1 n
-e t5 p2 1 n
-e t4 p3 1 n
-e t5 p8 1 n
-e p6 t5 1 n
-e t4 p7 1 n
-e p5 t4 1 n
-e t7 p10 1 n
-e p6 t7 1 n
-e t3 p6 1 n
-e t6 p9 1 n
-e p5 t6 1 n
-e t2 p5 1 n
-e p2 t3 1 n
-e p3 t2 1 n
-e {Aller file 1} {file 1} 1 n
-e {file 1} t3 1 n
-e {file 2} t2 1 n
-e {aller file 2} {file 2} 1 n
-e {local attente} {aller file 2} 1 n
-e {local attente} {Aller file 1} 1 n
-e {dispo sas} {sortir guichet 2} 1 n
-e {dispo sas} {sortir guichet 1} 1 n
-e {sortir guichet 2} {sas sort 2} 1 n
-e {sortir guichet 1} {sas sort 1} 1 n
-e {entrain de partir} {sortir guichet 1} 1 n
-e {personnes dehors} {entrer sas} 1 n
-e {1 sortir} {personnes dehors} 1 n
-e {entrer sas} {sas arrive} 1 n
-e {sas arrive} {entrer local} 1 n
-e {2 sortir} {dispo sas} 1 n
-e {dispo sas} {entrer sas} 1 n
-e {entrer local} {dispo sas} 1 n
-e {dispo sas} {sortir local 2} 1 n
-e {sortir local 2} {sas sort 2} 1 n
-e {sas sort 2} {2 sortir} 1 n
-e {sortir local 1} {sas sort 1} 1 n
-e {sas sort 1} {1 sortir} 1 n
-e {1 sortir} {dispo sas} 1 n
-e {dispo sas} {sortir local 1} 1 n
-e {local attente} {sortir local 1} 1 n
-e {entrer local} {local attente} 1 n
-e {2 sortir} {personnes dehors} 2 n
-e {local attente} {sortir local 2} 2 n
+p 740.0 175.0 {G1/ordo1} 0 n
+p 1205.0 175.0 {G1/ordo3} 0 n
+t 1075.0 175.0 {utiliser ordo3} n 0 w n {} ne
+p 60.0 325.0 {personnes dehors} 5 n
+t 300.0 560.0 {sortir guichet 2} n 0 w n {} ne
+t 325.0 490.0 {sortir guichet 1} n 0 w n {} ne
+t 65.0 465.0 {1 sortir} n 0 w n {} ne
+p 185.0 335.0 {dispo sas} 1 n
+p 590.0 80.0 {dispo G1} 1 n
+p 845.0 245.0 1attenteG2 0 n
+p 1105.0 290.0 2attenteG2 0 s
+t 1280.0 290.0 {passerG2/o3} n 0 w n {} ne
+p 300.0 355.0 {entrain de partir} 0 n
+t 740.0 245.0 changer1 s 0 w n {} ne
+t 60.0 230.0 {entrer sas} n 0 w n {} ne
+p 190.0 230.0 {sas arrive} 0 n
+t 300.0 230.0 {entrer local} n 0 w n {} ne
+p 300.0 295.0 {local attente} 0 n
+t 230.0 495.0 {sortir local 1} n 0 w n {} ne
+t 230.0 435.0 {sortir local 2} n 0 w n {} ne
+t 45.0 525.0 {2 sortir} n 0 w n {} ne
+p 175.0 535.0 {sas sort 1} 0 n
+p 170.0 595.0 {sas sort 2} 0 n
+p 620.0 175.0 {file 1} 0 n
+p 610.0 530.0 {file 2} 0 n
+t 510.0 625.0 quitter2 s 0 w n {} ne
+t 685.0 175.0 {aller G1} n 0 w n {} ne
+t 680.0 530.0 {aller G2} n 0 w n {} ne
+t 1040.0 245.0 {passerG2/o2} n 0 w n {} ne
+p 850.0 460.0 {1attente G1} 0 n
+t 1040.0 460.0 {passerG1/o2} s 0 w n {} ne
+p 740.0 530.0 {G2/ordo1} 0 s
+t 820.0 175.0 {utiliser ordo1} n 0 w n {} ne
+p 1105.0 430.0 2attenteG1 0 n
+t 1285.0 430.0 {passerG1/o3} s 0 w n {} ne
+t 965.0 290.0 changer3 s 0 w n {} ne
+p 965.0 175.0 {G1/ordo2} 0 n
+p 1205.0 530.0 {G2/ordo3} 0 s
+p 965.0 530.0 {G2/ordo2} 0 s
+t 1085.0 530.0 {utiliser ordo4} s 0 w n {} ne
+t 850.0 530.0 {utiliser ordo2} s 0 w n {} ne
+t 1205.0 405.0 quitter6 n 0 w n {} ne
+t 1205.0 315.0 quitter5 s 0 w n {} ne
+t 645.0 375.0 changerfile1 s 0 w n {} ne
+t 580.0 330.0 changerfile2 n 0 w n {} ne
+t 740.0 460.0 changer2 n 0 w n {} ne
+t 965.0 430.0 changer4 n 0 w n {} ne
+t 965.0 645.0 quitter4 s 0 w n {} ne
+p 575.0 645.0 {dispo G2} 1 n
+t 510.0 530.0 {aller file 2} n 0 w n {} ne
+t 510.0 575.0 quitterfile2 0 w n
+t 495.0 175.0 {Aller file 1} s 0 w n {} ne
+t 495.0 80.0 quitter1 n 0 w n {} ne
+t 495.0 125.0 quitterfile1 0 w n
+t 965.0 80.0 quitter3 n 0 w n {} ne
+e quitterfile2 {entrain de partir} 1 n
+e {file 2} quitterfile2 1 n
+e quitterfile1 {entrain de partir} 1 n
+e {file 1} quitterfile1 1 n
+e changerfile1 {file 1} 1 n
+e {file 2} changerfile1 1 n
+e changerfile2 {file 2} 1 n
+e {file 1} changerfile2 1 n
 e {entrain de partir} {sortir guichet 2} 2 n
-h petri3 small
+e {local attente} {sortir local 2} 2 n
+e {2 sortir} {personnes dehors} 2 n
+e {entrer local} {local attente} 1 n
+e {local attente} {sortir local 1} 1 n
+e {dispo sas} {sortir local 1} 1 n
+e {1 sortir} {dispo sas} 1 n
+e {sas sort 1} {1 sortir} 1 n
+e {sortir local 1} {sas sort 1} 1 n
+e {sas sort 2} {2 sortir} 1 n
+e {sortir local 2} {sas sort 2} 1 n
+e {dispo sas} {sortir local 2} 1 n
+e {entrer local} {dispo sas} 1 n
+e {dispo sas} {entrer sas} 1 n
+e {2 sortir} {dispo sas} 1 n
+e {sas arrive} {entrer local} 1 n
+e {entrer sas} {sas arrive} 1 n
+e {1 sortir} {personnes dehors} 1 n
+e {personnes dehors} {entrer sas} 1 n
+e {entrain de partir} {sortir guichet 1} 1 n
+e {sortir guichet 1} {sas sort 1} 1 n
+e {sortir guichet 2} {sas sort 2} 1 n
+e {dispo sas} {sortir guichet 1} 1 n
+e {dispo sas} {sortir guichet 2} 1 n
+e {local attente} {Aller file 1} 1 n
+e {local attente} {aller file 2} 1 n
+e {aller file 2} {file 2} 1 n
+e {file 2} {aller G2} 1 n
+e {file 1} {aller G1} 1 n
+e {Aller file 1} {file 1} 1 n
+e {dispo G2} 0.03458332363 78.85429601 {aller G2} 0.7820406142 50.00999908 1 n
+e {dispo G1} 0.9867676641 72.24956739 {aller G1} 0.2242427728 49.64876635 1 n
+e {aller G2} {G2/ordo1} 1 n
+e {G2/ordo1} {utiliser ordo2} 1 n
+e {utiliser ordo2} {G2/ordo2} 1 n
+e {aller G1} {G1/ordo1} 1 n
+e {G1/ordo1} {utiliser ordo1} 1 n
+e {utiliser ordo1} {G1/ordo2} 1 n
+e {G2/ordo1} changer2 1 n
+e changer2 {1attente G1} 1 n
+e {G1/ordo1} changer1 1 n
+e changer1 1attenteG2 1 n
+e changer2 0.4923542072 104.1201229 {dispo G2} 0.2672656559 101.5972441 1 n
+e changer1 0.5049719739 96.04686356 {dispo G1} 0.7177995127 79.62411695 1 n
+e {1attente G1} {passerG1/o2} 1 n
+e 1attenteG2 {passerG2/o2} 1 n
+e {dispo G2} 0.02115197762 188.663722 {passerG2/o2} 0.6772908612 197.225759 1 n
+e {dispo G1} 0.9979331777 154.0129865 {passerG1/o2} 0.3127844501 252.3846271 1 n
+e {passerG1/o2} {G1/ordo2} 1 n
+e {passerG2/o2} {G2/ordo2} 1 n
+e {passerG2/o3} {G2/ordo3} 1 n
+e {passerG1/o3} {G1/ordo3} 1 n
+e {dispo G1} 0.01226132922 571.6957233 {passerG1/o3} 0.2003521014 322.5678223 1 n
+e {dispo G2} 0.9856123294 697.849553 {passerG2/o3} 0.8189283252 204.9194958 1 n
+e 2attenteG2 {passerG2/o3} 1 n
+e 2attenteG1 {passerG1/o3} 1 n
+e changer3 0.2894404281 171.2308383 {dispo G1} 0.03854869389 175.1113931 1 n
+e changer4 0.7116680962 117.3882447 {dispo G2} 0.984359215 214.0327078 1 n
+e changer3 2attenteG2 1 n
+e changer4 2attenteG1 1 n
+e {utiliser ordo3} {G1/ordo3} 1 n
+e {utiliser ordo4} {G2/ordo3} 1 n
+e {G1/ordo2} changer3 1 n
+e {G1/ordo2} {utiliser ordo3} 1 n
+e {G2/ordo2} changer4 1 n
+e {G2/ordo2} {utiliser ordo4} 1 n
+e {G1/ordo1} quitter1 1 n
+e quitter1 {dispo G1} 1 n
+e {G1/ordo2} quitter3 1 n
+e quitter3 0.4683997393 339.6733725 {entrain de partir} 0.2022139682 294.1598205 1 n
+e quitter3 {dispo G1} 1 n
+e {G2/ordo1} quitter2 1 n
+e quitter2 {dispo G2} 1 n
+e quitter2 {entrain de partir} 1 n
+e {G2/ordo2} quitter4 1 n
+e quitter4 {dispo G2} 1 n
+e quitter4 0.5304279519 410.4789885 {entrain de partir} 0.8027878428 254.892134 1 n
+e {G1/ordo3} quitter5 1 n
+e quitter5 0.7453203213 34.0147027 {entrain de partir} 0.003818985501 250.0719896 1 n
+e quitter5 0.1830115565 303.4880558 {dispo G1} 0.03164916157 268.2871596 1 n
+e {G2/ordo3} quitter6 1 n
+e quitter6 0.8170519873 264.0927861 {dispo G2} 0.9646054804 408.0490167 1 n
+e quitter6 0.245919998 39.01281841 {entrain de partir} 0.002526056803 252.031744 1 n
+e quitter1 {entrain de partir} 1 n
+h petri3
 
 
